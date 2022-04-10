@@ -344,7 +344,7 @@ Test(my_printf, simple_string_STR, .init = redirect_all_std)
     str[2] = 4;
 
     my_printf("STR = %S\n", str);
-    cr_assert_stdout_eq_str("STR = Ep\004tech\n");
+    cr_assert_stdout_eq_str("STR = Ep\\004tech\n");
 }
 
 Test(my_printf, simple_string_STR2, .init = redirect_all_std)
@@ -355,7 +355,7 @@ Test(my_printf, simple_string_STR2, .init = redirect_all_std)
     str[6] = 1;
 
     my_printf("STR = %S\n", str);
-    cr_assert_stdout_eq_str("STR = AB\004D\003F\001HIJKLMNOPQRSTUVWXYZ\n");
+    cr_assert_stdout_eq_str("STR = AB\\004D\\003F\\001HIJKLMNOPQRSTUVWXYZ\n");
 }
 
 Test(my_printf, simple_string_STR3, .init = redirect_all_std)
@@ -369,7 +369,7 @@ Test(my_printf, simple_string_STR3, .init = redirect_all_std)
     str[6] = 1;
 
     my_printf("STR = %S\n", str);
-    cr_assert_stdout_eq_str("STR = A\006\005\004\003\002\001Ghl3e5/ge!t7(?\"pK=\n");
+    cr_assert_stdout_eq_str("STR = A\\006\\005\\004\\003\\002\\001Ghl3e5/ge!t7(?\"pK=\n");
 }
 
 Test(my_printf, simple_string_HEXADECIMAL, .init = redirect_all_std)
