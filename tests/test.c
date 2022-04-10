@@ -2,11 +2,11 @@
 ** EPITECH PROJECT, 2018
 ** test.c
 ** File description:
-** gcc test.c -I../include -L../lib/my -lmy --coverage -lcriterion && clear && ./a.out 
+** gcc test.c -I../include -L../lib/my -lmy --coverage -lcriterion && clear && ./a.out
 */
 
-#include <criterion/criterion.h>
 #include <criterion/redirect.h>
+#include <criterion/criterion.h>
 
 void redirect_all_std(void)
 {

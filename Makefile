@@ -5,29 +5,32 @@
 ## Le Makefile de la lib
 ##
 
-SRC =	my_getnbr.c	\
-		my_putchar.c	\
-		my_put_nbr.c	\
-		my_putstr.c	\
-		my_revstr.c	\
-		my_strcat.c	\
-		my_strlen.c	\
-		my_strncat.c	\
-		my_strncmp.c	\
-		my_strncpy.c	\
-		my_putint_in_str.c	\
-		my_printf.c	\
-		my_getlong.c	\
-		my_put_long.c	\
-		my_getdouble.c	\
-		my_put_double.c	\
-		my_hexa.c	\
-		my_binary.c	\
-		my_strlowercase.c	\
-		my_putpointer.c	\
-		my_octal.c	\
-		my_putspecstr.c	\
-		tests/test.c	\
+TSTF = tests/
+SRCF = src/
+
+SRC =	$(SRCF)my_getnbr.c			\
+		$(SRCF)my_putchar.c			\
+		$(SRCF)my_put_nbr.c			\
+		$(SRCF)my_putstr.c			\
+		$(SRCF)my_revstr.c			\
+		$(SRCF)my_strcat.c			\
+		$(SRCF)my_strlen.c			\
+		$(SRCF)my_strncat.c			\
+		$(SRCF)my_strncmp.c			\
+		$(SRCF)my_strncpy.c			\
+		$(SRCF)my_putint_in_str.c	\
+		$(SRCF)my_printf.c			\
+		$(SRCF)my_getlong.c			\
+		$(SRCF)my_put_long.c		\
+		$(SRCF)my_getdouble.c		\
+		$(SRCF)my_put_double.c		\
+		$(SRCF)my_hexa.c			\
+		$(SRCF)my_binary.c			\
+		$(SRCF)my_strlowercase.c	\
+		$(SRCF)my_putpointer.c		\
+		$(SRCF)my_octal.c			\
+		$(SRCF)my_putspecstr.c		\
+		$(TSTF)test.c				\
 
 OBJ =	$(SRC:.c=.o)
 
