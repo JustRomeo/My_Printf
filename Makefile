@@ -44,6 +44,9 @@ CRITERION = unit_tests
 
 all:	$(NAME)
 
+wmain:
+	gcc src/*.c main.c
+
 $(NAME):	$(OBJ)
 			ar rc $(NAME) $(OBJ)
 			rm -f $(OBJ)
