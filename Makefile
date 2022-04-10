@@ -30,13 +30,14 @@ SRC =	$(SRCF)my_getnbr.c			\
 		$(SRCF)my_putpointer.c		\
 		$(SRCF)my_octal.c			\
 		$(SRCF)my_putspecstr.c		\
+		\
 		$(TSTF)test.c				\
 
 OBJ =	$(SRC:.c=.o)
 
 NAME =	libmy.a
 
-CRIT = -lcriterion
+CRIT = --coverage -lcriterion
 
 WALL = -Wall -Wextra -Werror
 
@@ -64,3 +65,8 @@ tests_run:  $(OBJ)
 			gcc -o $(CRITERION) $(OBJ) $(CRIT)
 			rm -f $(OBJ)
 			./$(CRITERION)
+
+coverage:  $(OBJ)
+			gcc src/*.c tests/test.c --coverage -lcriterion
+			./a.out
+			/bin/gcovr
